@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <!-- ADDED/UPDATED FOR MOBILE: Changed width to device-width so it scales to phone screen size -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <title>Nabi</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="nabi.css" />
+</head>
+<body>
+   <div id="overlay">
+     <div id="enterText">Open minded ka ba?</div>
+ </div> 
+  <div id="falling-container"></div>
+
+ <video autoplay muted loop id="bgVideo">
+ <source src="butter.mp4" type="video/mp4" />
+ <!-- ADDED FOR MOBILE: Ensures background video scales and doesn't overflow on small screens -->
+ </video>
+ <!-- ADDED INLINE STYLE FOR MOBILE: object-fit and max-width to make video responsive -->
+ <style>
+ #bgVideo {
+     object-fit: cover;
+     width: 100vw;
+     height: 100vh;
+     position: fixed; /* Assuming it's fixed bg; adjust if not */
+     top: 0;
+     left: 0;
+     z-index: -1;
+ }
+ </style>
+
+ <div class="profile-box">
+<video autoplay muted loop playsinline class="profile-bg">
+ <source src="nabi.mp4" type="video/mp4" />
+ <!-- ADDED FOR MOBILE: Same for profile video -->
+ </video>
+
+ <div class="profile-left">
+ <img src="jheana.jpg" alt="emoji" class="profile-pic">
+ <!-- ADDED CLASS FOR MOBILE: We'll style this in CSS additions below -->
+ </div>
+ <div class="typewriter-box">
+<h1 id="username"></h1>
+<h2 id="quotes"></h2>
+ </div>
+ </div>
+
+ <div class="profile-links">
+ <a href="https://www.instagram.com/yanawoose/" target="_blank">
+ <img src="ig.png" alt="Instagram">
+ </a>
+ <a href="https://discord.com/users/864879874627207198" target="_blank">
+ <img src="dc.webp" alt="Discord" class="link-icon">
+ </a>
+
+ </div>  <div class="center-container">
+  <div class="rotating">
+<img src="istar.gif" alt="umiikot" class="rotating-img">
+<!-- ADDED CLASS FOR MOBILE: To scale the GIF -->
+</div>
+ </div> 
+
+ <button id="soundToggle">🔊</button>
+ <audio id="backgroundSound" loop>
+ <source src="make.MP3" type="audio/mpeg" />
+ </audio>
+
+ <script src="jheana.js"></script>
+</body>
+</html>
